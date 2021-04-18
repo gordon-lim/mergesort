@@ -1,7 +1,9 @@
 def mergesort(array):
     n = len(array)
+    #for last level
     if(n==1):
         return array
+    #split
     m = n//2 if (n%2==0) else n//2+1
     l = array[:m]
     r = array[m:]
@@ -11,7 +13,7 @@ def mergesort(array):
     new_arr=[]
     left_finger = 0
     right_finger = 0
-
+    #two finger algorithm
     while True:
         if (left_finger>len(l_prime)-1):
             new_arr.extend(r_prime[right_finger:])
